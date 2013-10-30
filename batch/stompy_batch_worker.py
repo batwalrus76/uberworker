@@ -74,7 +74,7 @@ def ioloop():
 	    	stomp.put(results_data,"/queue/UbertoolBatchResultsQueue",persistent=True)
 	    	stomp.ack(message)
 
-stomp = Client()
+stomp = Client(host='127.0.0.1')
 stomp.connect(username="admin",password="admin")
 stomp.subscribe("/queue/UbertoolBatchSubmissionQueue")
 continueRunning = True

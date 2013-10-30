@@ -1,7 +1,7 @@
 import sys
 import math
 import logging
-from django.utils import simplejson
+import simplejson
 
 def toJSON(terrplant_object):
     terrplant_vars = vars(terrplant_object)
